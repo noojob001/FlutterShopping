@@ -27,7 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   height: 300.0,
                   fit: BoxFit.contain,
                       ),
-              SizedBox(height: 40.0),
+              SizedBox(height: 0.0),
               SizedBox(
                   width: 250.0,
                   child: ElevatedButton.icon(
