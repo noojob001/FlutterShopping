@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:fluttershopping/screen/login.dart';
+import 'package:fluttershopping/screen/register.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -13,15 +15,17 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Text("Register Login"),
       ),
       body: Padding(
-        padding: const EdgeInsets.fromLTRB(30, 80, 30, 30),
+        padding: const EdgeInsets.fromLTRB(30, 40, 30, 30),
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Image(
-                  image: NetworkImage(
-                      "https://transcode-v2.app.engoo.com/image/fetch/f_auto,c_lfill,w_800,h_600,dpr_3/https://assets.app.engoo.com/images/JyRhUr6TrWFiVEB7J3frDhxxYBLXmLYTetihtaT1EKN.jpeg"
-                      )
+              Image.asset(
+                  'images/1.jpg',
+                  semanticLabel: 'This is Noodles',
+                  width: 400.0,
+                  height: 300.0,
+                  fit: BoxFit.contain,
                       ),
               SizedBox(height: 40.0),
               SizedBox(
@@ -29,7 +33,13 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: ElevatedButton.icon(
                     icon: Icon(Icons.login),
                     label: Text("Login     ", style: TextStyle(fontSize: 20)),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context){
+                          return LoginScreen();
+                      })
+                      );         
+                    },
                   )
                   ),
               SizedBox(height: 5.0),
@@ -38,7 +48,13 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: ElevatedButton.icon(
                     icon: Icon(Icons.add),
                     label: Text("Register", style: TextStyle(fontSize: 20)),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context){
+                          return RegisterScreen();
+                      })
+                      );         
+                    },
                   )
                   ),
             ],
