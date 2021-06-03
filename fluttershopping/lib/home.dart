@@ -34,7 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     icon: Icon(Icons.login),
                     label: Text("Login     ", style: TextStyle(fontSize: 20)),
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(
+                      Navigator.pushReplacement(context, MaterialPageRoute(
                         builder: (context){
                           return LoginScreen();
                       })
@@ -49,7 +49,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     icon: Icon(Icons.add),
                     label: Text("Register", style: TextStyle(fontSize: 20)),
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(
+                      Navigator.pushReplacement(context, MaterialPageRoute(
                         builder: (context){
                           return RegisterScreen();
                       })
