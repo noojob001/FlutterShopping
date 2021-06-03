@@ -93,7 +93,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                               password: profile.password)
                                           .then((value) {
                                         Fluttertoast.showToast(
-                                            msg: "Welcome  ${profile.email}",
+                                            msg: "${profile.email}  Register Succesful",
                                             gravity: ToastGravity.CENTER);
                                         formKey.currentState.reset();
                                         Navigator.pushReplacement(context,
