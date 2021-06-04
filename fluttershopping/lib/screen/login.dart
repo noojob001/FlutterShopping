@@ -3,6 +3,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttershopping/model/profile.dart';
 import 'package:fluttershopping/screen/welcome.dart';
+import 'package:fluttershopping/shop.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 
@@ -93,7 +94,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                          password: profile.password).then((value){
                                            formKey.currentState.reset();
                                            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context){
-                                             return WelcomeScreen();
+                                             return ShopScreen();
 
                                            }));
 
