@@ -33,6 +33,7 @@ dependencies:
   firebase_auth: ^1.2.0
   fluttertoast: ^8.0.7
   carousel_pro: ^1.0.0
+  flutter_svg: ^0.22.0
 
 dev_dependencies:
   flutter_test:
@@ -51,6 +52,9 @@ flutter:
     - images/noodle2.jpg
     - images/noodle3.jpg
     - images/noodle4.jpg
+    - images/hamburger.svg
+    - images/search.svg
+    - images/cart.svg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
