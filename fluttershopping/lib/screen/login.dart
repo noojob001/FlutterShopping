@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttershopping/components/body.dart';
 import 'package:fluttershopping/model/profile.dart';
 import 'package:fluttershopping/screen/welcome.dart';
 import 'package:fluttershopping/shop.dart';
