@@ -61,12 +61,12 @@ class Bannercard extends StatelessWidget {
               fit:BoxFit.cover),
               Container(
                 decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                  Color(0xFF343434).withOpacity(0.4),
-                  Color(0xFF343434).withOpacity(0.15),])
+                  // gradient: LinearGradient(
+                  //   begin: Alignment.topCenter,
+                  //   end: Alignment.bottomCenter,
+                  //   colors: [
+                  // Color(0xFF343434).withOpacity(0.1),
+                  // Color(0xFF343434).withOpacity(0.15),])
                 ),
               ),
               Padding(

@@ -49,6 +49,9 @@ flutter:
   assets:
     - images/1.jpg
     - images/noodle1.jpg
+    - images/noodle1l.jpg
+    - images/noodle1s.jpg
+    - images/noodle1veget.jpg
     - images/noodle2.jpg
     - images/noodle3.jpg
     - images/noodle4.jpg
