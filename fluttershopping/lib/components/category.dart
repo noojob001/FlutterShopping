@@ -68,7 +68,7 @@ class _Categories2State extends State<Categories2> {
   int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return SingleChildScrollView(
       padding: const EdgeInsets.symmetric(vertical:15.0),
       child: SizedBox(
         height: 25.0,
@@ -88,7 +88,7 @@ class _Categories2State extends State<Categories2> {
           selectedIndex = index;
         });
       },
-          child: Padding(
+          child: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(horizontal: 150.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -124,7 +124,7 @@ class _Categories3State extends State<Categories3> {
   int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return SingleChildScrollView(
       padding: const EdgeInsets.symmetric(vertical:15.0),
       child: SizedBox(
         height: 25.0,
@@ -144,7 +144,7 @@ class _Categories3State extends State<Categories3> {
           selectedIndex = index;
         });
       },
-          child: Padding(
+          child: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(horizontal: 145.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -179,7 +179,7 @@ class _Categories4State extends State<Categories4> {
   int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return SingleChildScrollView(
       padding: const EdgeInsets.symmetric(vertical:15.0),
       child: SizedBox(
         height: 25.0,
@@ -199,7 +199,7 @@ class _Categories4State extends State<Categories4> {
           selectedIndex = index;
         });
       },
-          child: Padding(
+          child: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(horizontal: 165.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -234,7 +234,7 @@ class _Categories5State extends State<Categories5> {
   int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return SingleChildScrollView(
       padding: const EdgeInsets.symmetric(vertical:15.0),
       child: SizedBox(
         height: 25.0,
