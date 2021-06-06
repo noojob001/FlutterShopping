@@ -36,9 +36,6 @@ List<Product> demoProducts = [
     title: "Original Noodle S Size",
     price: 64.99,
     description: description,
-    rating: 4.8,
-    isFavourite: true,
-    isPopular: true,
   ),
   Product(
     id: 2,
@@ -54,8 +51,6 @@ List<Product> demoProducts = [
     title: "Original Noodle",
     price: 50.5,
     description: description,
-    rating: 4.1,
-    isPopular: true,
   ),
   Product(
     id: 3,
@@ -71,9 +66,6 @@ List<Product> demoProducts = [
     title: "Original Noodle L Size",
     price: 36.55,
     description: description,
-    rating: 4.1,
-    isFavourite: true,
-    isPopular: true,
   ),
   Product(
     id: 4,
@@ -89,10 +81,8 @@ List<Product> demoProducts = [
     title: "Vegetarian Noodle",
     price: 20.20,
     description: description,
-    rating: 4.1,
-    isFavourite: true,
   ),
 ];
 
 const String description =
-    "Wireless Controller for PS4™ gives you what you want in your gaming from over precision control your games to sharing …";
+    "Noodles";
