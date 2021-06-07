@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class Product {
+class Product3 {
   final int id;
   final String title, description;
   final List<String> images;
   final List<Color> colors;
   final double price;
 
-  Product({
+  Product3({
     @required this.id,
     @required this.images,
     @required this.colors,
@@ -18,11 +18,11 @@ class Product {
   });
 }
 
-List<Product> demoProducts = [
-  Product(
+List<Product3> demoProducts3 = [
+  Product3(
     id: 1,
     images: [
-      "images/noodle1s.jpg",
+      "images/dump1.jpg",
     ],
     colors: [
       Color(0xFFF6625E),
@@ -30,14 +30,14 @@ List<Product> demoProducts = [
       Color(0xFFDECB9C),
       Colors.white,
     ],
-    title: "Original Noodle S Size",
+    title: "Original Dumpling",
     price: 64.99,
     description: description,
   ),
-  Product(
+  Product3(
     id: 2,
     images: [
-      "images/noodle1.jpg",
+      "images/dump2.jpg",
     ],
     colors: [
       Color(0xFFF6625E),
@@ -45,29 +45,14 @@ List<Product> demoProducts = [
       Color(0xFFDECB9C),
       Colors.white,
     ],
-    title: "Original Noodle",
+    title: "Special Dumpling",
     price: 50.5,
     description: description,
   ),
-  Product(
-    id: 3,
-    images: [
-      "images/noodle1l.jpg",
-    ],
-    colors: [
-      Color(0xFFF6625E),
-      Color(0xFF836DB8),
-      Color(0xFFDECB9C),
-      Colors.white,
-    ],
-    title: "Original Noodle L Size",
-    price: 36.55,
-    description: description,
-  ),
-  Product(
+  Product3(
     id: 4,
     images: [
-      "images/noodlejade.jpg",
+      "images/dump3.jpg",
     ],
     colors: [
       Color(0xFFF6625E),
@@ -75,8 +60,23 @@ List<Product> demoProducts = [
       Color(0xFFDECB9C),
       Colors.white,
     ],
-    title: "Jade Noodle",
-    price: 36.55,
+    title: "Chinese Dumpling",
+    price: 20.20,
+    description: description,
+  ),
+  Product3(
+    id: 4,
+    images: [
+      "images/dump4.jpg",
+    ],
+    colors: [
+      Color(0xFFF6625E),
+      Color(0xFF836DB8),
+      Color(0xFFDECB9C),
+      Colors.white,
+    ],
+    title: "Gyoza",
+    price: 20.20,
     description: description,
   ),
 ];
@@ -86,20 +86,20 @@ const String description =
 
 
     
-class ProductCard extends StatelessWidget {
-  const ProductCard({
+class ProductCard3 extends StatelessWidget {
+  const ProductCard3({
     Key key,
     this.width = 180,
     this.aspectRatio = 1.02,
-    @required this.product,
+    @required this.product3,
   }) : super(key: key);
   final double width, aspectRatio;
-  final Product product;
+  final Product3 product3;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left:20.0,right: 10.0),
+      padding: const EdgeInsets.only(left:20.0,right: 10.0,bottom: 50.0),
       child: SizedBox(
         width: width,
                 child: Column(
@@ -112,18 +112,18 @@ class ProductCard extends StatelessWidget {
                   color: Colors.grey.withOpacity(0.1),
                   borderRadius: BorderRadius.circular(15),
                 ),
-                child: Image.asset(product.images[0]),
+                child: Image.asset(product3.images[0]),
               )
             ),
             const SizedBox(height:10.0),
-            Text(product.title,
+            Text(product3.title,
             style: TextStyle(fontSize:17,color:Colors.black),
             maxLines: 2,
             ),
             Row(
               children: [
                 SizedBox(width:15.0),
-                Text("\$${product.price}",
+                Text("\$${product3.price}",
                 style:TextStyle(fontSize:16,fontWeight:FontWeight.w600,color:Colors.black)),
                 SizedBox(width:80.0),
                 Container(

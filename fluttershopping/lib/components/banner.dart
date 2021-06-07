@@ -25,6 +25,11 @@ class BannerSlide extends StatelessWidget {
                 category: "Soba Noodle",
                 press: () {},
               ),
+              Bannercard(
+                image: "images/dump3.jpg",
+                category: "Chinese Dumpling",
+                press: () {},
+              ),
             ],
           ),
         ),

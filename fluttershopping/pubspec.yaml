@@ -55,8 +55,16 @@ flutter:
     - images/noodle2.jpg
     - images/noodle3.jpg
     - images/noodle4.jpg
+    - images/noodlejade.jpg
+    - images/dump1.jpg
+    - images/dump2.jpg
+    - images/dump3.jpg
+    - images/dump4.jpg
     - images/gyoza.jpg
     - images/soba.jpg
+    - images/baonoodle.jpg
+    - images/ramen.jpg
+    - images/tradition.jpg
     - images/hamburger.svg
     - images/search.svg
     - images/cart.svg

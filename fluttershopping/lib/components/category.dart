@@ -64,7 +64,7 @@ class Categories2 extends StatefulWidget {
 }
 
 class _Categories2State extends State<Categories2> {
-  List<String> categories = ["Soba Noodles"];
+  List<String> categories = ["Special Noodles"];
   int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
@@ -120,61 +120,6 @@ class Categories3 extends StatefulWidget {
 }
 
 class _Categories3State extends State<Categories3> {
-  List<String> categories = ["Ramen Noodles"];
-  int selectedIndex = 0;
-  @override
-  Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      padding: const EdgeInsets.symmetric(vertical:15.0),
-      child: SizedBox(
-        height: 25.0,
-        child:ListView.builder(
-          scrollDirection: Axis.horizontal,
-          itemCount: categories.length,
-          itemBuilder: (context,index)=>buildCategory(index)
-          )
-          ),
-    );
-  }
-
-  Widget buildCategory(int index) {
-    return GestureDetector(
-      onTap: () {
-        setState(() {
-          selectedIndex = index;
-        });
-      },
-          child: SingleChildScrollView(
-        padding: const EdgeInsets.symmetric(horizontal: 145.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(categories[index],
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color:kTextColor
-            )
-              ),
-              Container(
-                margin: EdgeInsets.only(top: 5.0),
-                height:2.0,
-                width:103.0,
-                color: Colors.black
-              )
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class Categories4 extends StatefulWidget {
-
-  @override
-  _Categories4State createState() => _Categories4State();
-}
-
-class _Categories4State extends State<Categories4> {
   List<String> categories = ["Dumpling"];
   int selectedIndex = 0;
   @override
@@ -200,7 +145,7 @@ class _Categories4State extends State<Categories4> {
         });
       },
           child: SingleChildScrollView(
-        padding: const EdgeInsets.symmetric(horizontal: 165.0),
+        padding: const EdgeInsets.symmetric(horizontal: 170.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -213,62 +158,7 @@ class _Categories4State extends State<Categories4> {
               Container(
                 margin: EdgeInsets.only(top: 5.0),
                 height:2.0,
-                width:65.0,
-                color: Colors.black
-              )
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class Categories5 extends StatefulWidget {
-
-  @override
-  _Categories5State createState() => _Categories5State();
-}
-
-class _Categories5State extends State<Categories5> {
-  List<String> categories = ["Gyoza"];
-  int selectedIndex = 0;
-  @override
-  Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      padding: const EdgeInsets.symmetric(vertical:15.0),
-      child: SizedBox(
-        height: 25.0,
-        child:ListView.builder(
-          scrollDirection: Axis.horizontal,
-          itemCount: categories.length,
-          itemBuilder: (context,index)=>buildCategory(index)
-          )
-          ),
-    );
-  }
-
-  Widget buildCategory(int index) {
-    return GestureDetector(
-      onTap: () {
-        setState(() {
-          selectedIndex = index;
-        });
-      },
-          child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 177.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(categories[index],
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color:kTextColor
-            )
-              ),
-              Container(
-                margin: EdgeInsets.only(top: 5.0),
-                height:2.0,
-                width:43.0,
+                width:62.0,
                 color: Colors.black
               )
           ],
