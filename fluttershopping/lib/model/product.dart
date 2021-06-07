@@ -163,14 +163,13 @@ class Productlist extends StatelessWidget {
               child: Row(
         children: [
           ...List.generate(demoProducts.length, (index) => ProductCard(product: demoProducts[index],
-          press: () {
-                      Navigator.push(context, MaterialPageRoute(
-                        builder: (context){ProductDetail(product: demoProducts[index]);
-                          return DetailScreen();
-                      },
-                      )
-                      );         
-                    },
+          press: () =>Navigator.pushNamed(
+            context, 
+            DetailScreen.routeName,
+            arguments: ProductDetail(
+              product: demoProducts[index]),
+          )     
+                    
                     )
                     )
         ],
