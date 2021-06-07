@@ -5,6 +5,7 @@ import 'package:fluttershopping/model/color.dart';
 import 'package:fluttershopping/model/product.dart';
 import 'package:fluttershopping/model/product2.dart';
 import 'package:fluttershopping/model/product3.dart';
+import 'package:fluttershopping/screen/detail.dart';
 
 import 'banner.dart';
 import 'category.dart';
@@ -59,35 +60,19 @@ class _BodyState extends State<Body> {
         BannerSlide(),
         Categories(),
         SizedBox(height:5.0),
-        SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-                  child: Row(
-            children: [
-              ...List.generate(demoProducts.length, (index) => ProductCard(product: demoProducts[index],))
-            ],
-          ),
-        ),
+        Productlist(),
         Categories2(),
-        SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-                  child: Row(
-            children: [
-              ...List.generate(demoProducts2.length, (index) => ProductCard2(product2: demoProducts2[index],))
-            ],
-          ),
-        ),
+        Productlist2(),
         Categories3(),
-        SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-                  child: Row(
-            children: [
-              ...List.generate(demoProducts3.length, (index) => ProductCard3(product3: demoProducts3[index],))
-            ],
-          ),
-        ),
+        Productlist3(),
         ]
       ),
     );
     
   }
 }
+
+
+
+
+

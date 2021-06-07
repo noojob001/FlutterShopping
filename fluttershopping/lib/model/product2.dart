@@ -159,3 +159,21 @@ class ProductCard2 extends StatelessWidget {
     );
   }
 }
+
+class Productlist2 extends StatelessWidget {
+  const Productlist2({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+              child: Row(
+        children: [
+          ...List.generate(demoProducts2.length, (index) => ProductCard2(product2: demoProducts2[index],))
+        ],
+      ),
+    );
+  }
+}
