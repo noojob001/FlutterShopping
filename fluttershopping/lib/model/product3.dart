@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:fluttershopping/screen/detail.dart';
 
 class Product3 {
   final int id;
@@ -92,53 +93,58 @@ class ProductCard3 extends StatelessWidget {
     this.width = 180,
     this.aspectRatio = 1.02,
     @required this.product3,
+    @required this.press,
   }) : super(key: key);
   final double width, aspectRatio;
   final Product3 product3;
+  final GestureTapCallback press;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(left:20.0,right: 10.0,bottom: 50.0),
-      child: SizedBox(
-        width: width,
-                child: Column(
-          children: [
-            AspectRatio(
-              aspectRatio:aspectRatio,
-              child:Container(
-                padding:const EdgeInsets.fromLTRB(18, 0, 18, 0),
-                decoration: BoxDecoration(
-                  color: Colors.grey.withOpacity(0.1),
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: Image.asset(product3.images[0]),
-              )
-            ),
-            const SizedBox(height:10.0),
-            Text(product3.title,
-            style: TextStyle(fontSize:17,color:Colors.black),
-            maxLines: 2,
-            ),
-            Row(
-              children: [
-                SizedBox(width:15.0),
-                Text("\$${product3.price}",
-                style:TextStyle(fontSize:16,fontWeight:FontWeight.w600,color:Colors.black)),
-                SizedBox(width:80.0),
-                Container(
-                  padding: EdgeInsets.all(4.0),
-                  width:28.0,
-                  height:28.0,
-                  decoration:BoxDecoration(color: Colors.grey.withOpacity(0.1),
-                  shape:BoxShape.circle,),
-                  child:
-                SvgPicture.asset("images/cart.svg"),
-                ),
-                
-              ],
-            ),
-          ],
+      child: GestureDetector(
+        onTap: press,
+              child: SizedBox(
+          width: width,
+                  child: Column(
+            children: [
+              AspectRatio(
+                aspectRatio:aspectRatio,
+                child:Container(
+                  padding:const EdgeInsets.fromLTRB(18, 0, 18, 0),
+                  decoration: BoxDecoration(
+                    color: Colors.grey.withOpacity(0.1),
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Image.asset(product3.images[0]),
+                )
+              ),
+              const SizedBox(height:10.0),
+              Text(product3.title,
+              style: TextStyle(fontSize:17,color:Colors.black),
+              maxLines: 2,
+              ),
+              Row(
+                children: [
+                  SizedBox(width:15.0),
+                  Text("\$${product3.price}",
+                  style:TextStyle(fontSize:16,fontWeight:FontWeight.w600,color:Colors.black)),
+                  SizedBox(width:80.0),
+                  Container(
+                    padding: EdgeInsets.all(4.0),
+                    width:28.0,
+                    height:28.0,
+                    decoration:BoxDecoration(color: Colors.grey.withOpacity(0.1),
+                    shape:BoxShape.circle,),
+                    child:
+                  SvgPicture.asset("images/cart.svg"),
+                  ),
+                  
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -156,7 +162,15 @@ class Productlist3 extends StatelessWidget {
       scrollDirection: Axis.horizontal,
               child: Row(
         children: [
-          ...List.generate(demoProducts3.length, (index) => ProductCard3(product3: demoProducts3[index],))
+          ...List.generate(demoProducts3.length, (index) => ProductCard3(product3: demoProducts3[index],
+          press: () {
+                      Navigator.pushReplacement(context, MaterialPageRoute(
+                        builder: (context){
+                          return DetailScreen();
+                      })
+                      );         
+                    },
+          ))
         ],
       ),
     );

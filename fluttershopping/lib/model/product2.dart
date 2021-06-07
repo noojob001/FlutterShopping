@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:fluttershopping/screen/detail.dart';
 
 class Product2 {
   final int id;
@@ -107,53 +108,58 @@ class ProductCard2 extends StatelessWidget {
     this.width = 180,
     this.aspectRatio = 1.02,
     @required this.product2,
+    @required this.press,
   }) : super(key: key);
   final double width, aspectRatio;
   final Product2 product2;
+  final GestureTapCallback press;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(left:20.0,right: 10.0),
-      child: SizedBox(
-        width: width,
-                child: Column(
-          children: [
-            AspectRatio(
-              aspectRatio:aspectRatio,
-              child:Container(
-                padding:const EdgeInsets.fromLTRB(18, 0, 18, 0),
-                decoration: BoxDecoration(
-                  color: Colors.grey.withOpacity(0.1),
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: Image.asset(product2.images[0]),
-              )
-            ),
-            const SizedBox(height:10.0),
-            Text(product2.title,
-            style: TextStyle(fontSize:17,color:Colors.black),
-            maxLines: 2,
-            ),
-            Row(
-              children: [
-                SizedBox(width:15.0),
-                Text("\$${product2.price}",
-                style:TextStyle(fontSize:16,fontWeight:FontWeight.w600,color:Colors.black)),
-                SizedBox(width:80.0),
-                Container(
-                  padding: EdgeInsets.all(4.0),
-                  width:28.0,
-                  height:28.0,
-                  decoration:BoxDecoration(color: Colors.grey.withOpacity(0.1),
-                  shape:BoxShape.circle,),
-                  child:
-                SvgPicture.asset("images/cart.svg"),
-                ),
-                
-              ],
-            ),
-          ],
+      child: GestureDetector(
+        onTap: press,
+              child: SizedBox(
+          width: width,
+                  child: Column(
+            children: [
+              AspectRatio(
+                aspectRatio:aspectRatio,
+                child:Container(
+                  padding:const EdgeInsets.fromLTRB(18, 0, 18, 0),
+                  decoration: BoxDecoration(
+                    color: Colors.grey.withOpacity(0.1),
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Image.asset(product2.images[0]),
+                )
+              ),
+              const SizedBox(height:10.0),
+              Text(product2.title,
+              style: TextStyle(fontSize:17,color:Colors.black),
+              maxLines: 2,
+              ),
+              Row(
+                children: [
+                  SizedBox(width:15.0),
+                  Text("\$${product2.price}",
+                  style:TextStyle(fontSize:16,fontWeight:FontWeight.w600,color:Colors.black)),
+                  SizedBox(width:80.0),
+                  Container(
+                    padding: EdgeInsets.all(4.0),
+                    width:28.0,
+                    height:28.0,
+                    decoration:BoxDecoration(color: Colors.grey.withOpacity(0.1),
+                    shape:BoxShape.circle,),
+                    child:
+                  SvgPicture.asset("images/cart.svg"),
+                  ),
+                  
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -171,7 +177,16 @@ class Productlist2 extends StatelessWidget {
       scrollDirection: Axis.horizontal,
               child: Row(
         children: [
-          ...List.generate(demoProducts2.length, (index) => ProductCard2(product2: demoProducts2[index],))
+          ...List.generate(demoProducts2.length, (index) => ProductCard2(product2: demoProducts2[index],
+          press: () {
+                      Navigator.pushReplacement(context, MaterialPageRoute(
+                        builder: (context){
+                          return DetailScreen();
+                      })
+                      );         
+                    },
+                    )
+                    )
         ],
       ),
     );

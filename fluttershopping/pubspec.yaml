@@ -68,6 +68,7 @@ flutter:
     - images/hamburger.svg
     - images/search.svg
     - images/cart.svg
+    - images/star.svg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
