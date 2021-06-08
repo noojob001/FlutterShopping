@@ -47,6 +47,7 @@ flutter:
   uses-material-design: true
 
   assets:
+    - images/banner.jpg
     - images/1.jpg
     - images/noodle1.jpg
     - images/noodle1l.jpg

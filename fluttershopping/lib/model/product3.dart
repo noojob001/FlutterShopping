@@ -24,6 +24,7 @@ List<Product3> demoProducts3 = [
     id: 1,
     images: [
       "images/dump1.jpg",
+      "images/noodle4.jpg",
     ],
     colors: [
       Color(0xFFF6625E),
@@ -39,6 +40,7 @@ List<Product3> demoProducts3 = [
     id: 2,
     images: [
       "images/dump2.jpg",
+      "images/noodle4.jpg",
     ],
     colors: [
       Color(0xFFF6625E),
@@ -54,6 +56,7 @@ List<Product3> demoProducts3 = [
     id: 4,
     images: [
       "images/dump3.jpg",
+      "images/noodle4.jpg",
     ],
     colors: [
       Color(0xFFF6625E),
@@ -69,6 +72,7 @@ List<Product3> demoProducts3 = [
     id: 4,
     images: [
       "images/dump4.jpg",
+      "images/noodle4.jpg",
     ],
     colors: [
       Color(0xFFF6625E),

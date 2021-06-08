@@ -24,6 +24,7 @@ List<Product2> demoProducts2 = [
     id: 1,
     images: [
       "images/soba.jpg",
+      "images/noodle1.jpg",
     ],
     colors: [
       Color(0xFFF6625E),
@@ -39,6 +40,7 @@ List<Product2> demoProducts2 = [
     id: 2,
     images: [
       "images/baonoodle.jpg",
+      "images/baonoodle2.jpg",
     ],
     colors: [
       Color(0xFFF6625E),

@@ -19,6 +19,8 @@ class _BodyState extends State<Body> {
   final carousel = Carousel(
     boxFit: BoxFit.cover,
     images: [
+      AssetImage('images/banner.jpg'),
+      AssetImage('images/1.jpg'),
       AssetImage('images/noodle1.jpg'),
       AssetImage('images/noodle2.jpg'),
       AssetImage('images/noodle3.jpg'),
