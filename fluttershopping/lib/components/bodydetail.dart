@@ -36,7 +36,7 @@ class BodyDetail extends StatelessWidget {
                   ],
                 ),
               ),
-              
+              AddcartBtn()
             ],
           ),
         ),
@@ -44,6 +44,7 @@ class BodyDetail extends StatelessWidget {
     );
   }
 }
+
 
 class NumCart extends StatelessWidget {
   const NumCart({
