@@ -3,6 +3,7 @@ import 'package:fluttershopping/components/detaildecription/detaildescription2.d
 import 'package:fluttershopping/model/product.dart';
 import 'package:fluttershopping/model/product2.dart';
 
+import 'detaildecription/addremove.dart';
 import 'detailimage/detailimage2.dart';
 
 class BodyDetail2 extends StatelessWidget {
@@ -19,9 +20,42 @@ class BodyDetail2 extends StatelessWidget {
         DetailImage2(product2: product2),
         TopBorderContainer(
           color:Colors.white,
-          child:DetailDescription2(product2: product2, pressSeeMore: (){},)
-        )
+          child:Column(
+            children: [
+              DetailDescription2(product2: product2, pressSeeMore: (){},
+              ),
+              TopBorderContainer(
+                color: Colors.grey[200],
+                child: Row(
+                  children: [
+                    NumCart(),
+                    Removebtn(),
+
+                    // จำนวนของCart
+
+                    AddBtn(),
+                  ],
+                ),
+              ),
+              AddcartBtn()
+            ],
+          ),
+        ),
       ],
+    );
+  }
+}
+
+class NumCart extends StatelessWidget {
+  const NumCart({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 40,
+      width: 40,
     );
   }
 }
