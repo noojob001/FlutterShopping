@@ -17,7 +17,7 @@ class _CartPageState extends State<CartPage> {
         appBar: AppBar(
           backgroundColor: Colors.indigo,
           title: Text("Cart"),
-          actions: <Widget>[
+          actions: <Widget>[ 
             FlatButton(
                 child: Text(
                   "Clear",
