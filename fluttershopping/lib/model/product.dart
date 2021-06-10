@@ -8,6 +8,7 @@ class Product {
   final List<String> images;
   final List<Color> colors;
   final double price;
+  final int qty;
 
   Product({
     @required this.id,
@@ -16,6 +17,7 @@ class Product {
     @required this.title,
     @required this.price,
     @required this.description,
+    @required this.qty,
   });
 }
 
@@ -33,6 +35,7 @@ List<Product> demoProducts = [
     ],
     title: "Original Noodle S Size",
     price: 64.99,
+    qty:4,
     description: description,
   ),
   Product(
@@ -48,6 +51,7 @@ List<Product> demoProducts = [
     ],
     title: "Original Noodle",
     price: 50.5,
+    qty:10,
     description: description,
   ),
   Product(
@@ -63,6 +67,7 @@ List<Product> demoProducts = [
     ],
     title: "Original Noodle L Size",
     price: 36.55,
+    qty:7,
     description: description,
   ),
   Product(
@@ -78,6 +83,7 @@ List<Product> demoProducts = [
     ],
     title: "Jade Noodle",
     price: 36.55,
+    qty:10,
     description: description,
   ),
 ];
