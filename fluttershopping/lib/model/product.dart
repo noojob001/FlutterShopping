@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:fluttershopping/screen/allproduct.dart';
 import 'package:fluttershopping/screen/detail.dart';
+import 'package:scoped_model/scoped_model.dart';
+
+import 'cartmodel.dart';
 
 class Product {
   final int id;
@@ -21,7 +25,7 @@ class Product {
   });
 }
 
-List<Product> demoProducts = [
+List<Product> _products = [
   Product(
     id: 1,
     images: [
@@ -165,22 +169,26 @@ class Productlist extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-              child: Row(
-        children: [
-          ...List.generate(demoProducts.length, (index) => ProductCard(product: demoProducts[index],
-          press: () =>Navigator.pushNamed(
-            context, 
-            DetailScreen.routeName,
-            arguments: ProductDetail(
-              product: demoProducts[index]),
-          )     
-                    
-                    )
-                    )
-        ],
-      ),
+    return ScopedModelDescendant<CartModel>(
+      builder: (context, child, model) {
+        return SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+                child: Row(
+          children: [
+            ...List.generate(_products.length, (index) => ProductCard(product: _products[index],
+            press: () =>Navigator.pushNamed(
+              context, 
+              AllProduct.routeName,
+              arguments: ProductDetail(
+                product: _products[index]),
+            )     
+                      
+                      )
+                      )
+          ],
+        ),
+      );
+      }
     );
   }
 }

@@ -24,7 +24,7 @@ class BodyDetail extends StatelessWidget {
                 pressSeeMore: () {},
               ),
               TopBorderContainer(
-                color: Colors.grey[200],
+                color: Colors.white,
                 child: Row(
                   // children: [
                   //   NumCart(),

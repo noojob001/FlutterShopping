@@ -66,7 +66,7 @@ class AddcartBtn extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(
-          left: 80.0, right: 80.0, top: 35.0, bottom: 25.0),
+          left: 80.0, right: 80.0, top: 100.0, bottom: 25.0),
       child: Container(
           width: double.infinity,
           height: 50,
