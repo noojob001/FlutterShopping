@@ -1,26 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:fluttershopping/model/cartmodel.dart';
-import 'package:fluttershopping/model/product.dart';
+// import 'package:fluttershopping/model/product.dart';
 import 'package:scoped_model/scoped_model.dart';
-class Product {
-  final int id;
-  final String title, description;
-  final List<String> images;
-  final List<Color> colors;
-  final double price;
-  final int qty;
 
-  Product({
-    @required this.id,
-    @required this.images,
-    @required this.colors,
-    @required this.title,
-    @required this.price,
-    @required this.description,
-    @required this.qty,
-  });
-}
 
+class AllProduct extends StatelessWidget {
+  static String routeName = "/AllProduct";
 List<Product> _products = [
   Product(
     id: 1,
@@ -35,8 +20,8 @@ List<Product> _products = [
     ],
     title: "Original Noodle S Size",
     price: 64.99,
-    qty:4,
-    description: description,
+    qty:1,
+    description: "Test S Size",
   ),
   Product(
     id: 2,
@@ -51,8 +36,8 @@ List<Product> _products = [
     ],
     title: "Original Noodle",
     price: 50.5,
-    qty:10,
-    description: description,
+    qty:1,
+    description: "Original Noodle",
   ),
   Product(
     id: 3,
@@ -67,8 +52,8 @@ List<Product> _products = [
     ],
     title: "Original Noodle L Size",
     price: 36.55,
-    qty:7,
-    description: description,
+    qty:1,
+    description: "L Size",
   ),
   Product(
     id: 4,
@@ -83,17 +68,10 @@ List<Product> _products = [
     ],
     title: "Jade Noodle",
     price: 36.55,
-    qty:10,
-    description: description,
+    qty:1,
+    description: "Jade Noodle",
   ),
 ];
-
-const String description =
-    "Noodles";
-
-class AllProduct extends StatelessWidget {
-  static String routeName = "/AllProduct";
-
 
    @override
   Widget build(BuildContext context) {
@@ -123,7 +101,7 @@ class AllProduct extends StatelessWidget {
               Text("\$"+_products[index].price.toString()),
               // ignore: deprecated_member_use
               OutlineButton(
-                    child: Text("Add"),
+                    child: Text("Add to Cart"),
                     onPressed: () => model.addProduct(_products[index]))
             ])); 
           });

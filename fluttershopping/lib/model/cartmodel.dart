@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
 
 class CartModel extends Model {
@@ -53,10 +54,12 @@ class CartModel extends Model {
 class Product {
   int id;
   String title;
+  String description;
   String imgUrl;
-  String images;
+  List<String> images;
+  List<Color> colors;
   double price;
   int qty;
 
-  Product({this.id, this.title, this.price, this.qty, this.imgUrl, this.images});
+  Product({this.id, this.title, this.price, this.qty, this.imgUrl, this.images, this.colors, this.description});
 }
