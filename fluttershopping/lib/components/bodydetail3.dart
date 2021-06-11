@@ -28,14 +28,14 @@ class BodyDetail3 extends StatelessWidget {
               TopBorderContainer(
                 color: Colors.grey[200],
                 child: Row(
-                  children: [
-                    NumCart(),
-                    Removebtn(),
+                  // children: [
+                  //   NumCart(),
+                  //   Removebtn(),
 
-                    // จำนวนของCart
+                  //   // จำนวนของCart
 
-                    AddBtn(),
-                  ],
+                  //   AddBtn(),
+                  // ],
                 ),
               ),
               AddcartBtn()

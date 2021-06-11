@@ -145,6 +145,7 @@ class ProductCard extends StatelessWidget {
                     shape:BoxShape.circle,),
                     child:
                   SvgPicture.asset("images/cart.svg"),
+
                   ),
                   
                 ],

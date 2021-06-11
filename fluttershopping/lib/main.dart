@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
       // theme: ThemeData(
       //   primarySwatch: Colors.orange[300],
       // ),
-      home: HomePage(),
+      home: ShopScreen(),
       routes: routes,
       ),
       

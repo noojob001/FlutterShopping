@@ -32,10 +32,10 @@ class _ShopScreenState extends State<ShopScreen> {
 
         },
         ),
-        IconButton(icon: SvgPicture.asset("images/cart.svg"), onPressed: () {
-
-        },
-        )
+        IconButton(
+            icon: SvgPicture.asset("images/cart.svg"),
+            onPressed: () => Navigator.pushNamed(context, '/cart'),
+          )
       ],
     );
   }
