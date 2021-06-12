@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:fluttershopping/screen/allproduct.dart';
 import 'package:fluttershopping/screen/detail.dart';
 
 class Product2 {
@@ -33,7 +34,7 @@ List<Product2> demoProducts2 = [
       Colors.white,
     ],
     title: "Soba Noodle",
-    price: 64.99,
+    price: 60,
     description: description,
   ),
   Product2(
@@ -49,7 +50,7 @@ List<Product2> demoProducts2 = [
       Colors.white,
     ],
     title: "Bao Noodle",
-    price: 50.5,
+    price: 55,
     description: description,
   ),
   Product2(
@@ -64,7 +65,7 @@ List<Product2> demoProducts2 = [
       Colors.white,
     ],
     title: "Vegetarian Noodle",
-    price: 20.20,
+    price: 55,
     description: description,
   ),
   Product2(
@@ -79,7 +80,7 @@ List<Product2> demoProducts2 = [
       Colors.white,
     ],
     title: "Ramen Noodle",
-    price: 20.20,
+    price: 55,
     description: description,
   ),
   Product2(
@@ -94,13 +95,13 @@ List<Product2> demoProducts2 = [
       Colors.white,
     ],
     title: "Auspicious Noodle",
-    price: 20.20,
+    price: 65,
     description: description,
   ),
 ];
 
 const String description =
-    "Noodles";
+    "Special Noodles";
 
 
     
@@ -182,7 +183,7 @@ class Productlist2 extends StatelessWidget {
           ...List.generate(demoProducts2.length, (index) => ProductCard2(product2: demoProducts2[index],
           press: () =>Navigator.pushNamed(
             context, 
-            DetailScreen2.routeName,
+            AllProduct.routeName,
             arguments: ProductDetail2(
               product2: demoProducts2[index]),
           ) 
