@@ -132,7 +132,7 @@ class ProductCard2 extends StatelessWidget {
                 child:Container(
                   padding:const EdgeInsets.fromLTRB(18, 0, 18, 0),
                   decoration: BoxDecoration(
-                    color: Colors.grey.withOpacity(0.1),
+                    color: Colors.orange[300].withOpacity(0.8),
                     borderRadius: BorderRadius.circular(15),
                   ),
                   child: Image.asset(product2.images[0]),

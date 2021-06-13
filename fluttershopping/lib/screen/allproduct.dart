@@ -232,7 +232,9 @@ List<Product> _products = [
           itemBuilder: (context, index){
             return ScopedModelDescendant<CartModel>(
         builder: (context, child, model) {
-      return Card( child: Column( children: <Widget>[
+      return Card(
+        color: Colors.orange[300].withOpacity(0.8),
+      child: Column( children: <Widget>[
         Image.asset(_products[index].images[0], height: 120, width: 120,),
         Text(_products[index].title, style: TextStyle(fontWeight: FontWeight.bold),),
         Text("\$"+_products[index].price.toString()),

@@ -47,12 +47,13 @@ class _CartPageState extends State<CartPage> {
                             return ListTile(
                               title: Text(model.cart[index].title),
                               subtitle: Text(model.cart[index].qty.toString() +
-                                  " x " +
+                                  "kg x " +
                                   model.cart[index].price.toString() +
-                                  " = " +
+                                  "฿ = " +
                                   (model.cart[index].qty *
                                           model.cart[index].price)
-                                      .toString()),
+                                      .toString() + "฿"
+                                      ),
                               trailing: Row(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
@@ -82,7 +83,7 @@ class _CartPageState extends State<CartPage> {
                   Container(
                       padding: EdgeInsets.all(8.0),
                       child: Text(
-                        "Total: \$ " +
+                        "Total: \฿ " +
                             ScopedModel.of<CartModel>(context,
                                     rebuildOnChange: true)
                                 .totalCartValue

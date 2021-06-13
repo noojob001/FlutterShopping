@@ -15,6 +15,7 @@ class _ShopScreenState extends State<ShopScreen> {
     // ignore: non_constant_identifier_names
     double ScreenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
+      backgroundColor: Colors.amber[100],
       appBar: buildAppBar(),
       body: Body()
     );
@@ -22,7 +23,7 @@ class _ShopScreenState extends State<ShopScreen> {
 
   AppBar buildAppBar() {
     return AppBar(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.orange[300],
       elevation: 0,
       leading: 
       IconButton(icon: SvgPicture.asset("images/hamburger.svg"), onPressed: () {  },
