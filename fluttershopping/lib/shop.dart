@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fluttershopping/components/body.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class ShopScreen extends StatefulWidget {
   @override
@@ -12,6 +13,7 @@ class _ShopScreenState extends State<ShopScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final auth = FirebaseAuth.instance;
     // ignore: non_constant_identifier_names
     double ScreenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
@@ -22,7 +24,10 @@ class _ShopScreenState extends State<ShopScreen> {
           children: <Widget>[
             new UserAccountsDrawerHeader(decoration: BoxDecoration(
               color: Colors.orange[300],
-            ),accountName: new Text('Name'), accountEmail: Text('@Email'),
+            ),accountName: new Text(auth.currentUser.email,
+                    textAlign: TextAlign.right,
+            ), 
+            accountEmail: Text('@Email'),
             currentAccountPicture: new CircleAvatar(
               backgroundImage: NetworkImage('https://cw.lnwfile.com/_/cw/_raw/kt/vi/6g.jpg'),
             ),)
