@@ -17,6 +17,18 @@ class _ShopScreenState extends State<ShopScreen> {
     return Scaffold(
       backgroundColor: Colors.amber[100],
       appBar: buildAppBar(),
+      drawer:new Drawer(
+        child:ListView(
+          children: <Widget>[
+            new UserAccountsDrawerHeader(decoration: BoxDecoration(
+              color: Colors.orange[300],
+            ),accountName: new Text('Name'), accountEmail: Text('@Email'),
+            currentAccountPicture: new CircleAvatar(
+              backgroundImage: NetworkImage('https://cw.lnwfile.com/_/cw/_raw/kt/vi/6g.jpg'),
+            ),)
+          ],
+        )
+      ),
       body: Body()
     );
   }
@@ -25,9 +37,9 @@ class _ShopScreenState extends State<ShopScreen> {
     return AppBar(
       backgroundColor: Colors.orange[300],
       elevation: 0,
-      leading: 
-      IconButton(icon: SvgPicture.asset("images/hamburger.svg"), onPressed: () {  },
-      ),
+      // leading: 
+      // IconButton(icon: SvgPicture.asset("images/hamburger.svg"), onPressed: () {  },
+      // ),
       actions: <Widget>[
         IconButton(icon: SvgPicture.asset("images/search.svg"), onPressed: () {
 
