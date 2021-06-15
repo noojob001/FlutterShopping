@@ -29,7 +29,7 @@ class _ShopScreenState extends State<ShopScreen> {
             new UserAccountsDrawerHeader(decoration: BoxDecoration(
               color: Colors.orange[300],
             ),accountName: new Text(auth.currentUser.email,
-                    textAlign: TextAlign.right,
+                    textAlign: TextAlign.right,style: TextStyle(fontSize: 17),
             ), 
             accountEmail: Text(''),
             currentAccountPicture: new CircleAvatar(
@@ -99,7 +99,7 @@ class _ShopScreenState extends State<ShopScreen> {
 
 
             Padding(
-              padding: EdgeInsets.fromLTRB(40, 60, 40, 0),
+              padding: EdgeInsets.fromLTRB(40, 30, 40, 0),
               child: SizedBox(
                     width: 10.0,
                     child: ElevatedButton(
