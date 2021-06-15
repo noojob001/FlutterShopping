@@ -156,7 +156,7 @@ class ProductCard2 extends StatelessWidget {
                     decoration:BoxDecoration(color: Colors.grey.withOpacity(0.1),
                     shape:BoxShape.circle,),
                     child:
-                  SvgPicture.asset("images/cart.svg"),
+                  Icon(Icons.arrow_forward_outlined),
                   ),
                   
                 ],

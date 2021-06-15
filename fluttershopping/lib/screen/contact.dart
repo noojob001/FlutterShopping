@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
-class Aboutme extends StatefulWidget {
+class ContactUs extends StatefulWidget {
 
   @override
-  _AboutmeState createState() => _AboutmeState();
+  _ContactUsState createState() => _ContactUsState();
 }
 
-class _AboutmeState extends State<Aboutme> {
+class _ContactUsState extends State<ContactUs> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(backgroundColor: Colors.orange[200],
-        title: Text("About me"),
+        title:Text("Contact Us")
       ),
       
     );
