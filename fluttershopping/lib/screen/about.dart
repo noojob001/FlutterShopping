@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Aboutme extends StatefulWidget {
 
@@ -59,7 +61,15 @@ class _AboutmeState extends State<Aboutme> {
                   ),
                                 ),
                 ),
-              )
+              ),
+              // SizedBox(height: 20,),
+              // Divider(height:5,
+              // color:Colors.black),
+              // SizedBox(height: 20,),
+              IconButton(
+            icon: SvgPicture.asset("images/facebook.svg"),
+            onPressed: () => launch("https://www.facebook.com/limnoodle/"),
+          )
         ],
       )
       
