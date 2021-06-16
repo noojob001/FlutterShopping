@@ -31,8 +31,34 @@ class _AboutmeState extends State<Aboutme> {
           ),
           SizedBox(height:40),
               ListTile(
-                title: Text("โรงงานบะหมี่เฮียลิ้ม (บางรัก)",style:TextStyle(fontSize: 18)),
-                subtitle:Text("79 ถนนจรัสเวียง แขวงสีลม เขตบางรัก กรุงเทพมหานคร 10500",style:TextStyle(fontSize: 18)),
+                title: Center(child: Text("โรงงานบะหมี่เฮียลิ้ม (บางรัก)",style:TextStyle(fontSize: 18))),
+                subtitle:Padding(
+                  padding: EdgeInsets.only(left:40.0),
+                  child: Text("79 ถนนจรัสเวียง แขวงสีลม เขตบางรัก กรุงเทพมหานคร 10500",style:TextStyle(fontSize: 18)),
+                ),
+              ),
+              SizedBox(height: 20,),
+              Padding(
+                padding: EdgeInsets.fromLTRB(15, 0, 240, 15),
+                child: Container(decoration: BoxDecoration(color: Colors.orange[200],borderRadius: BorderRadius.circular(20)),
+                                child: ListTile(
+                    title:Padding(
+                      padding: EdgeInsets.only(left:15.0),
+                      child: Text("เกี่ยวกับฉัน",style:TextStyle(fontSize: 16)),
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
+                child: Container(decoration:BoxDecoration(color: Colors.orange[100],borderRadius: BorderRadius.circular(20)),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(6.0),
+                                  child: ListTile(
+                    title: Text("โรงหมี่เฮียลิ้มเปิดดำเนินการมานานกว่า 50 ปี ด้วยประสบการณ์อันยาวนานของเรา จึงการรันตีด้วยคุณภาพความน่าเชื่อถือ และเป็นที่รู้จักมากมาย  ด้วยเส้นที่เหนียว นุ่ม สีเหลืองนวล  ใช้วัตถุดิบแป้งคุณภาพดี  เราใช้ไข่ไก่สดสะอาดในการผลิต ไม่ใส่สารกันบูด ปลอดภัย ผลิตทุกวัน จึงสดและใหม่ และสามารถผลิตได้ตามที่ต้องการ จำหน่ายทั้งปลีก - ส่ง",style:TextStyle(fontSize: 16)),
+                  ),
+                                ),
+                ),
               )
         ],
       )
