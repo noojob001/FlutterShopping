@@ -13,7 +13,7 @@ class _AboutmeState extends State<Aboutme> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.orange[200],
-          title: Text("About Us"),
+          title: Text("About Us",style:TextStyle(color: Colors.black)),
         ),
         body: Column(
           children: <Widget>[
@@ -104,9 +104,9 @@ class _AboutmeState extends State<Aboutme> {
                       IconButton(
                         icon: SvgPicture.asset("images/line.svg"),
                         onPressed: () =>
-                            launch("http://line.me/ti/p/~setlaser"),
+                            launch("http://line.me/ti/p/~lexsomphol"),
                       ),
-                      Text("@lex"),
+                      Text("lexsomphol"),
                       SizedBox(width:15),
                       IconButton(
                         icon: Icon(Icons.phone),

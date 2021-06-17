@@ -5,6 +5,7 @@ import 'package:fluttershopping/components/body.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fluttershopping/screen/about.dart';
 import 'package:fluttershopping/screen/allproduct.dart';
+import 'package:fluttershopping/screen/change.dart';
 import 'package:fluttershopping/screen/contact.dart';
 
 import 'home.dart';
@@ -86,15 +87,33 @@ class _ShopScreenState extends State<ShopScreen> {
                 height:5.0
               ),
             ),
+            // Padding(
+            //   padding: EdgeInsets.fromLTRB(15, 0, 0, 0),
+            //   child: ListTile(
+            //     title: Text("Contact Us",style: TextStyle(fontSize: 18),),
+            //     onTap: () {
+            //       Navigator.of(context).pop();
+            //       Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => ContactUs()));
+            //     },
+            //   ),
+            // ),
             Padding(
-              padding: EdgeInsets.fromLTRB(15, 0, 0, 0),
-              child: ListTile(
-                title: Text("Contact Us",style: TextStyle(fontSize: 18),),
-                onTap: () {
-                  Navigator.of(context).pop();
-                  Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => ContactUs()));
-                },
-              ),
+              padding: EdgeInsets.fromLTRB(40, 30, 40, 0),
+              child: SizedBox(
+                    width: 10.0,
+                    child: ElevatedButton(
+                      child: Text(
+                        "Change Password",
+                        style: TextStyle(fontSize: 20),
+                      ),
+                      onPressed: () {
+                          Navigator.pushReplacement(context,
+                              MaterialPageRoute(builder: (context) {
+                            return ChangeID();
+                          }));
+                      },
+                      style:ElevatedButton.styleFrom(primary: Colors.orange[300],)
+                    )),
             ),
 
 

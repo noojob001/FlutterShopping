@@ -3,6 +3,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttershopping/components/body.dart';
 import 'package:fluttershopping/model/profile.dart';
+import 'package:fluttershopping/screen/forgotpass.dart';
 import 'package:fluttershopping/screen/welcome.dart';
 import 'package:fluttershopping/shop.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -119,6 +120,19 @@ class _LoginScreenState extends State<LoginScreen> {
                                   Navigator.pushReplacement(context,
                                       MaterialPageRoute(builder: (context) {
                                     return HomeScreen();
+                                  }));
+                                },
+                              )),
+
+                              SizedBox(
+                              width: double.infinity,
+                              child: ElevatedButton(
+                                child: Text("Forgot Password",
+                                    style: TextStyle(fontSize: 20)),
+                                onPressed: () {
+                                  Navigator.pushReplacement(context,
+                                      MaterialPageRoute(builder: (context) {
+                                    return ForgotPassword();
                                   }));
                                 },
                               )),

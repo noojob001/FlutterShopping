@@ -4,6 +4,8 @@ import 'package:fluttershopping/home.dart';
 import 'package:fluttershopping/model/cartmodel.dart';
 import 'package:fluttershopping/routes/routes.dart';
 import 'package:fluttershopping/screen/about.dart';
+import 'package:fluttershopping/screen/change.dart';
+import 'package:fluttershopping/screen/contact.dart';
 import 'package:fluttershopping/screen/productdemo.dart';
 import 'package:fluttershopping/shop.dart';
 import 'package:scoped_model/scoped_model.dart';
@@ -29,7 +31,7 @@ class MyApp extends StatelessWidget {
       // theme: ThemeData(
       //   primarySwatch: Colors.orange[300],
       // ),
-      home: Aboutme(),
+      home: HomeScreen(),
       routes: routes,
       ),
       
