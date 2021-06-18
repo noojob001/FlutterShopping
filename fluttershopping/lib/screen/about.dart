@@ -100,14 +100,14 @@ class _AboutmeState extends State<Aboutme> {
                             launch("https://www.facebook.com/limnoodles/"),
                       ),
                       Text("@limnoodles"),
-                      SizedBox(width:15),
+                      SizedBox(width:0),
                       IconButton(
                         icon: SvgPicture.asset("images/line.svg"),
                         onPressed: () =>
                             launch("http://line.me/ti/p/~lexsomphol"),
                       ),
                       Text("lexsomphol"),
-                      SizedBox(width:15),
+                      SizedBox(width:0),
                       IconButton(
                         icon: Icon(Icons.phone),
                         onPressed: () =>

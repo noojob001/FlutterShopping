@@ -96,8 +96,8 @@ class _ForgotPasswordState extends State<ForgotPassword> {
     // ignore: deprecated_member_use
     scaffoldKey.currentState.showSnackBar(SnackBar(
       content: Text("We send the detail to $email successfully.",
-          style: TextStyle(color: Colors.white)),
-      backgroundColor: Colors.orange[100],
+          style: TextStyle(color: Colors.black)),
+      backgroundColor: Colors.green[200],
     ));
   }
 }
