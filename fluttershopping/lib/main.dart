@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttershopping/BeforeLogin/beforelogin.dart';
 // ignore: unused_import
 import 'package:fluttershopping/home.dart';
 import 'package:fluttershopping/model/cartmodel.dart';
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
       // theme: ThemeData(
       //   primarySwatch: Colors.orange[300],
       // ),
-      home: HomeScreen(),
+      home: ShopScreend(),
       routes: routes,
       ),
       
