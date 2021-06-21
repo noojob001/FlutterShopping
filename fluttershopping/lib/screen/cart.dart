@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_braintree/flutter_braintree.dart';
 import 'package:fluttershopping/model/cartmodel.dart';
@@ -11,6 +12,7 @@ class CartPage extends StatefulWidget {
 }
 
 class _CartPageState extends State<CartPage> {
+  final auth = FirebaseAuth.instance;
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -109,7 +111,7 @@ class _CartPageState extends State<CartPage> {
                                     rebuildOnChange: true)
                                 .totalCartValue
                                 .toString(),
-                                displayName: '',
+                                displayName: auth.currentUser.email,
                             )
                           );
                         },

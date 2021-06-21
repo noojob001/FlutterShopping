@@ -97,24 +97,24 @@ class _ShopScreenState extends State<ShopScreen> {
             //     },
             //   ),
             // ),
-            Padding(
-              padding: EdgeInsets.fromLTRB(40, 30, 40, 0),
-              child: SizedBox(
-                    width: 10.0,
-                    child: ElevatedButton(
-                      child: Text(
-                        "Change Password",
-                        style: TextStyle(fontSize: 20),
-                      ),
-                      onPressed: () {
-                          Navigator.pushReplacement(context,
-                              MaterialPageRoute(builder: (context) {
-                            return ChangeID();
-                          }));
-                      },
-                      style:ElevatedButton.styleFrom(primary: Colors.orange[300],)
-                    )),
-            ),
+            // Padding(
+            //   padding: EdgeInsets.fromLTRB(40, 30, 40, 0),
+            //   child: SizedBox(
+            //         width: 10.0,
+            //         child: ElevatedButton(
+            //           child: Text(
+            //             "Change Password",
+            //             style: TextStyle(fontSize: 20),
+            //           ),
+            //           onPressed: () {
+            //               Navigator.pushReplacement(context,
+            //                   MaterialPageRoute(builder: (context) {
+            //                 return ChangeID();
+            //               }));
+            //           },
+            //           style:ElevatedButton.styleFrom(primary: Colors.orange[300],)
+            //         )),
+            // ),
 
 
             Padding(
