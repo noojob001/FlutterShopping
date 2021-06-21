@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_braintree/flutter_braintree.dart';
 import 'package:fluttershopping/model/cartmodel.dart';
 import 'package:scoped_model/scoped_model.dart';
 
@@ -99,7 +100,19 @@ class _CartPageState extends State<CartPage> {
                         textColor: Colors.white,
                         elevation: 0,
                         child: Text("BUY NOW"),
-                        onPressed: () {},
+                        onPressed: () async{
+                          var request = BraintreeDropInRequest(
+                            tokenizationKey:'sandbox_s96j7h2r_qtc7swvs9yp8z8q4',
+                            collectDeviceData: true,
+                            paypalRequest: BraintreePayPalRequest(
+                              amount: ScopedModel.of<CartModel>(context,
+                                    rebuildOnChange: true)
+                                .totalCartValue
+                                .toString(),
+                                displayName: '',
+                            )
+                          );
+                        },
                       ))
                 ])));
   }
