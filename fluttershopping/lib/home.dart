@@ -3,6 +3,7 @@ import 'package:fluttershopping/screen/login.dart';
 import 'package:fluttershopping/screen/register.dart';
 
 class HomeScreen extends StatefulWidget {
+  static String routeName = "/HomeScreen";
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
