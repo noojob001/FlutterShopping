@@ -10,9 +10,9 @@ class AllProduct extends StatelessWidget {
 List<Product> _products = [
   Product(
     id: 1,
-    images: [
+    images: 
       "images/noodle1s.jpg",
-    ],
+    
     colors: [
       Color(0xFFF6625E),
       Color(0xFF836DB8),
@@ -26,9 +26,8 @@ List<Product> _products = [
   ),
   Product(
     id: 2,
-    images: [
+    images: 
       "images/noodle1.jpg",
-    ],
     colors: [
       Color(0xFFF6625E),
       Color(0xFF836DB8),
@@ -42,9 +41,8 @@ List<Product> _products = [
   ),
   Product(
     id: 3,
-    images: [
+    images: 
       "images/noodle1l.jpg",
-    ],
     colors: [
       Color(0xFFF6625E),
       Color(0xFF836DB8),
@@ -58,9 +56,8 @@ List<Product> _products = [
   ),
   Product(
     id: 4,
-    images: [
+    images: 
       "images/noodlejade.jpg",
-    ],
     colors: [
       Color(0xFFF6625E),
       Color(0xFF836DB8),
@@ -74,9 +71,8 @@ List<Product> _products = [
   ),
    Product(
     id: 5,
-    images: [
+    images: 
       "images/soba.jpg",
-    ],
     colors: [
       Color(0xFFF6625E),
       Color(0xFF836DB8),
@@ -85,13 +81,13 @@ List<Product> _products = [
     ],
     title: "Soba Noodle",
     price: 60,
+    qty:1,
     description: "Soba Noodle",
   ),
   Product(
     id: 6,
-    images: [
+    images: 
       "images/baonoodle.jpg",
-    ],
     colors: [
       Color(0xFFF6625E),
       Color(0xFF836DB8),
@@ -100,13 +96,13 @@ List<Product> _products = [
     ],
     title: "Bao Noodle",
     price: 55,
+    qty:1,
     description: "Bao Noodle",
   ),
   Product(
     id: 7,
-    images: [
+    images: 
       "images/noodle1veget.jpg",
-    ],
     colors: [
       Color(0xFFF6625E),
       Color(0xFF836DB8),
@@ -115,13 +111,13 @@ List<Product> _products = [
     ],
     title: "Vegetarian Noodle",
     price: 55,
+    qty:1,
     description: "Vegetarian Noodle",
   ),
   Product(
     id: 8,
-    images: [
+    images: 
       "images/ramen.jpg",
-    ],
     colors: [
       Color(0xFFF6625E),
       Color(0xFF836DB8),
@@ -130,13 +126,13 @@ List<Product> _products = [
     ],
     title: "Ramen Noodle",
     price: 55,
+    qty:1,
     description: "Ramen Noodle",
   ),
   Product(
     id: 9,
-    images: [
+    images: 
       "images/tradition.jpg",
-    ],
     colors: [
       Color(0xFFF6625E),
       Color(0xFF836DB8),
@@ -145,13 +141,13 @@ List<Product> _products = [
     ],
     title: "Auspicious Noodle",
     price: 65,
+    qty:1,
     description: "Auspicious Noodle",
   ),
   Product(
-    id: 1,
-    images: [
+    id: 10,
+    images: 
       "images/dump1.jpg",
-    ],
     colors: [
       Color(0xFFF6625E),
       Color(0xFF836DB8),
@@ -160,13 +156,13 @@ List<Product> _products = [
     ],
     title: "Original Dumpling",
     price: 55,
+    qty:1,
     description: "Original Dumpling",
   ),
   Product(
-    id: 2,
-    images: [
+    id: 11,
+    images: 
       "images/dump2.jpg",
-    ],
     colors: [
       Color(0xFFF6625E),
       Color(0xFF836DB8),
@@ -175,13 +171,13 @@ List<Product> _products = [
     ],
     title: "Special Dumpling",
     price: 60,
+    qty:1,
     description: "Special Dumpling",
   ),
   Product(
-    id: 4,
-    images: [
+    id: 12,
+    images: 
       "images/dump3.jpg",
-    ],
     colors: [
       Color(0xFFF6625E),
       Color(0xFF836DB8),
@@ -190,13 +186,13 @@ List<Product> _products = [
     ],
     title: "Chinese Dumpling",
     price: 55,
+    qty:1,
     description: "Chinese Dumpling",
   ),
   Product(
-    id: 4,
-    images: [
+    id: 13,
+    images: 
       "images/dump4.jpg",
-    ],
     colors: [
       Color(0xFFF6625E),
       Color(0xFF836DB8),
@@ -205,6 +201,7 @@ List<Product> _products = [
     ],
     title: "Gyoza",
     price: 75,
+    qty:1,
     description: "Gyoza",
   ),
 ];
@@ -235,7 +232,7 @@ List<Product> _products = [
       return Card(
         color: Colors.orange[300].withOpacity(0.8),
       child: Column( children: <Widget>[
-        Image.asset(_products[index].images[0], height: 120, width: 120,),
+        Image.asset(_products[index].images, height: 120, width: 120,),
         Text(_products[index].title, style: TextStyle(fontWeight: FontWeight.bold),),
         Text("\$"+_products[index].price.toString()),
         // ignore: deprecated_member_use

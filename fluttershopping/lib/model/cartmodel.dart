@@ -56,7 +56,7 @@ class Product {
   String title;
   String description;
   String imgUrl;
-  List<String> images;
+  String images;
   List<Color> colors;
   double price;
   int qty;

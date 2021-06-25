@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_braintree/flutter_braintree.dart';
 import 'package:fluttershopping/model/cartmodel.dart';
 import 'package:scoped_model/scoped_model.dart';
+import 'allproduct.dart';
 
 class CartPage extends StatefulWidget {
   @override
@@ -48,6 +49,7 @@ class _CartPageState extends State<CartPage> {
                         return ScopedModelDescendant<CartModel>(
                           builder: (context, child, model) {
                             return ListTile(
+                              leading:ClipRRect(child: Image.asset(model.cart[index].images,height: 60, width: 80, ),borderRadius: BorderRadius.circular(10),),
                               title: Text(model.cart[index].title),
                               subtitle: Text(model.cart[index].qty.toString() +
                                   "kg x " +
