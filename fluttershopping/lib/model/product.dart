@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fluttershopping/screen/allproduct.dart';
@@ -171,11 +172,7 @@ class Productlist extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScopedModelDescendant<CartModel>(
       builder: (context, child, model) {
-        return SingleChildScrollView(
-        scrollDirection: Axis.horizontal,
-                child: Row(
-          children: [
-            ...List.generate(_products.length, (index) => ProductCard(product: _products[index],
+        return CarouselSlider(items: [...List.generate(_products.length, (index) => ProductCard(product: _products[index],
             press: () =>Navigator.pushNamed(
               context, 
               AllProduct.routeName,
@@ -184,10 +181,33 @@ class Productlist extends StatelessWidget {
             )     
                       
                       )
-                      )
-          ],
-        ),
-      );
+                      )], options: CarouselOptions(
+                      autoPlay: true,
+                      height: 280,
+                      enableInfiniteScroll: true,
+                      reverse: false,
+                      initialPage: 0,
+                      scrollDirection: Axis.horizontal,
+                      ),
+          
+        );
+      //   return SingleChildScrollView(
+      //   scrollDirection: Axis.horizontal,
+      //           child: Row(
+      //     children: [
+      //       ...List.generate(_products.length, (index) => ProductCard(product: _products[index],
+      //       press: () =>Navigator.pushNamed(
+      //         context, 
+      //         AllProduct.routeName,
+      //         arguments: ProductDetail(
+      //           product: _products[index]),
+      //       )     
+                      
+      //                 )
+      //                 )
+      //     ],
+      //   ),
+      // );
       }
     );
   }

@@ -40,6 +40,7 @@ dependencies:
   flutter_email_sender: ^5.0.0
   flutter_braintree: ^1.2.1
   http:
+  carousel_slider: ^4.0.0
 
 dev_dependencies:
   flutter_test:

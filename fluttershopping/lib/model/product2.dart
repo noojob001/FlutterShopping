@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fluttershopping/screen/allproduct.dart';
@@ -176,21 +177,24 @@ class Productlist2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-              child: Row(
-        children: [
-          ...List.generate(demoProducts2.length, (index) => ProductCard2(product2: demoProducts2[index],
-          press: () =>Navigator.pushNamed(
-            context, 
-            AllProduct.routeName,
-            arguments: ProductDetail2(
-              product2: demoProducts2[index]),
-          ) 
-                    )
-                    )
-        ],
-      ),
-    );
+    return CarouselSlider(items: [...List.generate(demoProducts2.length, (index) => ProductCard2(product2: demoProducts2[index],
+            press: () =>Navigator.pushNamed(
+              context, 
+              AllProduct.routeName,
+              arguments: ProductDetail2(
+                product2: demoProducts2[index]),
+            )     
+                      
+                      )
+                      )], options: CarouselOptions(
+                      autoPlay: true,
+                      height: 280,
+                      enableInfiniteScroll: true,
+                      reverse: false,
+                      initialPage: 0,
+                      scrollDirection: Axis.horizontal,
+                      ),
+          
+        );
   }
 }
