@@ -189,7 +189,11 @@ class Productlist2 extends StatelessWidget {
                       )], options: CarouselOptions(
                       autoPlay: true,
                       height: 280,
+                      autoPlayInterval: Duration(seconds: 1),
+                      autoPlayCurve: Curves.fastLinearToSlowEaseIn,
+                      autoPlayAnimationDuration: Duration(milliseconds: 13000),
                       enableInfiniteScroll: true,
+                      viewportFraction: 0.5,
                       reverse: false,
                       initialPage: 0,
                       scrollDirection: Axis.horizontal,
