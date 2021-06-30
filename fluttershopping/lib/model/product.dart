@@ -183,10 +183,11 @@ class Productlist extends StatelessWidget {
                       )
                       )], options: CarouselOptions(
                       autoPlay: true,
+                      aspectRatio: 16/9,
                       height: 280,
-                      autoPlayInterval: Duration(seconds: 1),
-                      autoPlayCurve: Curves.fastLinearToSlowEaseIn,
-                      autoPlayAnimationDuration: Duration(milliseconds: 13000),
+                      autoPlayInterval: const Duration(seconds: 2),
+                      autoPlayCurve: Curves.linear,
+                      autoPlayAnimationDuration: const Duration(milliseconds: 2000),
                       enableInfiniteScroll: true,
                       viewportFraction: 0.5,
                       reverse: false,
