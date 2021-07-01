@@ -21,7 +21,7 @@ class _CartPageState extends State<CartPage> {
         appBar: AppBar(
           backgroundColor: Colors.indigo,
           title: Text("Cart"),
-          actions: <Widget>[ 
+          actions: <Widget>[
             FlatButton(
                 child: Text(
                   "Clear",
@@ -49,7 +49,14 @@ class _CartPageState extends State<CartPage> {
                         return ScopedModelDescendant<CartModel>(
                           builder: (context, child, model) {
                             return ListTile(
-                              leading:ClipRRect(child: Image.asset(model.cart[index].images,height: 60, width: 80, ),borderRadius: BorderRadius.circular(10),),
+                              leading: ClipRRect(
+                                child: Image.asset(
+                                  model.cart[index].images,
+                                  height: 60,
+                                  width: 80,
+                                ),
+                                borderRadius: BorderRadius.circular(10),
+                              ),
                               title: Text(model.cart[index].title),
                               subtitle: Text(model.cart[index].qty.toString() +
                                   "kg x " +
@@ -57,8 +64,8 @@ class _CartPageState extends State<CartPage> {
                                   "฿ = " +
                                   (model.cart[index].qty *
                                           model.cart[index].price)
-                                      .toString() + "฿"
-                                      ),
+                                      .toString() +
+                                  "฿"),
                               trailing: Row(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
@@ -99,38 +106,40 @@ class _CartPageState extends State<CartPage> {
                       )),
                   SizedBox(
                       width: double.infinity,
+                      // ignore: deprecated_member_use
                       child: RaisedButton(
                         color: Colors.yellow[900],
                         textColor: Colors.white,
                         elevation: 0,
                         child: Text("BUY NOW"),
-                        onPressed: () async{
+                        onPressed: () async {
                           var request = BraintreeDropInRequest(
-                            tokenizationKey:'sandbox_s96j7h2r_qtc7swvs9yp8z8q4',
-                            collectDeviceData: true,
-                            paypalRequest: BraintreePayPalRequest(
-                              amount: ScopedModel.of<CartModel>(context,
-                                    rebuildOnChange: true)
-                                .totalCartValue
-                                .toString(),
+                              tokenizationKey:
+                                  'sandbox_s96j7h2r_qtc7swvs9yp8z8q4',
+                              collectDeviceData: true,
+                              googlePaymentRequest:
+                                  BraintreeGooglePaymentRequest(
+                                totalPrice: '1.00',
+                                currencyCode: 'THB',
+                                billingAddressRequired: false,
+                              ),
+                              paypalRequest: BraintreePayPalRequest(
+                                amount: ScopedModel.of<CartModel>(context,
+                                        rebuildOnChange: true)
+                                    .totalCartValue
+                                    .toString(),
                                 displayName: auth.currentUser.email,
-                            ),
-                            googlePaymentRequest: BraintreeGooglePaymentRequest(
-                    totalPrice: '1.00',
-                    currencyCode: 'THB',
-                    billingAddressRequired: false,
-                  ),
-                            cardEnabled: true
-                            
-                          );
-                          BraintreeDropInResult result = await BraintreeDropIn.start(request);
-                          if(result != null ) {
+                              ),
+                              
+                              cardEnabled: true);
+                          BraintreeDropInResult result =
+                              await BraintreeDropIn.start(request);
+                          if (result != null) {
                             print(result.paymentMethodNonce.description);
                             print(result.paymentMethodNonce.nonce);
                           }
                         },
-                      )
-                      )
+                      ))
                 ])));
   }
 }
