@@ -20,6 +20,7 @@ class _ShopScreenState extends State<ShopScreen> {
   @override
   Widget build(BuildContext context) {
     final auth = FirebaseAuth.instance;
+    final user = FirebaseAuth.instance.currentUser;
     double ScreenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: Colors.amber[100],

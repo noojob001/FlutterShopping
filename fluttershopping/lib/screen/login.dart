@@ -4,11 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fluttershopping/components/body.dart';
 import 'package:fluttershopping/model/profile.dart';
+import 'package:fluttershopping/provider/google.dart';
 import 'package:fluttershopping/screen/forgotpass.dart';
 import 'package:fluttershopping/screen/welcome.dart';
 import 'package:fluttershopping/shop.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:form_field_validator/form_field_validator.dart';
+import 'package:provider/provider.dart';
 
 import '../home.dart';
 
@@ -58,7 +60,20 @@ class _LoginScreenState extends State<LoginScreen> {
                             padding: EdgeInsets.only(left:100.0,bottom: 20),
                             child: IconButton(
             icon: SvgPicture.asset("images/google.svg"),
-            onPressed: () => Navigator.pushNamed(context, '/cart'),
+            onPressed: () async {
+              final provider = Provider.of<GoogleSignInProvider>(context, listen: false);
+              provider.googleLogin();
+              await FirebaseAuth.instance.signInWithEmailAndPassword(
+                                        email: profile.email,
+                                         password: profile.password).then((value){
+                                           formKey.currentState.reset();
+                                           Navigator.pushReplacement(context, MaterialPageRoute(builder: (context){
+                                             return ShopScreen();
+
+                                           }));
+
+                                         });
+            },
           ),
                           ),
                           Text("Email", style: TextStyle(fontSize: 20)),

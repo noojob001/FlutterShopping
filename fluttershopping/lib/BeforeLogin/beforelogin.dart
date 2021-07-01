@@ -50,7 +50,10 @@ class _ShopScreendState extends State<ShopScreend> {
                 title: Text("All Product",style: TextStyle(fontSize: 18),),
                 onTap: () {
                   Navigator.of(context).pop();
-                  Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => AllProduct()));
+                  Navigator.pushReplacement(context,
+                              MaterialPageRoute(builder: (context) {
+                            return HomeScreen();
+                          }));
                 },
               ),
             ),
@@ -126,13 +129,13 @@ class _ShopScreendState extends State<ShopScreend> {
 
         // },
         // ),
-        IconButton(
-            icon: Icon(Icons.shopping_cart),
-            onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context){
-                                             return HomeScreen();
+        // IconButton(
+        //     icon: Icon(Icons.shopping_cart),
+        //     onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context){
+        //                                      return HomeScreen();
 
-                                           })),
-          )
+        //                                    })),
+        //   )
       ],
     );
   }
