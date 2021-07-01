@@ -41,6 +41,9 @@ dependencies:
   flutter_braintree: ^1.2.1
   http:
   carousel_slider: ^4.0.0
+  google_sign_in: ^5.0.4
+  font_awesome_flutter: ^9.0.0
+  provider: ^5.0.0
 
 dev_dependencies:
   flutter_test:
@@ -80,6 +83,7 @@ flutter:
     - images/limicon.jpg
     - images/facebook.svg
     - images/line.svg
+    - images/google.svg
 
 
 

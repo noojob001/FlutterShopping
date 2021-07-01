@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fluttershopping/components/body.dart';
 import 'package:fluttershopping/model/profile.dart';
 import 'package:fluttershopping/screen/forgotpass.dart';
@@ -43,15 +44,23 @@ class _LoginScreenState extends State<LoginScreen> {
                 appBar: AppBar(
                   title: Text("Login"),
                 ),
+                
                 body: Container(
                     child: Padding(
-                  padding: const EdgeInsets.fromLTRB(30, 80, 30, 30),
+                  padding: const EdgeInsets.fromLTRB(30, 50, 30, 30),
                   child: Form(
                     key: formKey,
                     child: SingleChildScrollView(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
+                          Padding(
+                            padding: EdgeInsets.only(left:100.0,bottom: 20),
+                            child: IconButton(
+            icon: SvgPicture.asset("images/google.svg"),
+            onPressed: () => Navigator.pushNamed(context, '/cart'),
+          ),
+                          ),
                           Text("Email", style: TextStyle(fontSize: 20)),
                           TextFormField(
                             validator: MultiValidator([

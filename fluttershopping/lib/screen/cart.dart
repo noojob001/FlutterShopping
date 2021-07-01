@@ -119,7 +119,10 @@ class _CartPageState extends State<CartPage> {
                               collectDeviceData: true,
                               googlePaymentRequest:
                                   BraintreeGooglePaymentRequest(
-                                totalPrice: '1.00',
+                                totalPrice: ScopedModel.of<CartModel>(context,
+                                        rebuildOnChange: true)
+                                    .totalCartValue
+                                    .toString(),
                                 currencyCode: 'THB',
                                 billingAddressRequired: false,
                               ),
