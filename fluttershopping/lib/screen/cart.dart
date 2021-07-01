@@ -115,7 +115,13 @@ class _CartPageState extends State<CartPage> {
                                 .toString(),
                                 displayName: auth.currentUser.email,
                             ),
+                            googlePaymentRequest: BraintreeGooglePaymentRequest(
+                    totalPrice: '1.00',
+                    currencyCode: 'THB',
+                    billingAddressRequired: false,
+                  ),
                             cardEnabled: true
+                            
                           );
                           BraintreeDropInResult result = await BraintreeDropIn.start(request);
                           if(result != null ) {
