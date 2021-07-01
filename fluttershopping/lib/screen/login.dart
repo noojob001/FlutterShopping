@@ -60,19 +60,13 @@ class _LoginScreenState extends State<LoginScreen> {
                             padding: EdgeInsets.only(left:100.0,bottom: 20),
                             child: IconButton(
             icon: SvgPicture.asset("images/google.svg"),
-            onPressed: () async {
+            onPressed: ()  {
               final provider = Provider.of<GoogleSignInProvider>(context, listen: false);
               provider.googleLogin();
-              await FirebaseAuth.instance.signInWithEmailAndPassword(
-                                        email: profile.email,
-                                         password: profile.password).then((value){
-                                           formKey.currentState.reset();
-                                           Navigator.pushReplacement(context, MaterialPageRoute(builder: (context){
-                                             return ShopScreen();
+              // await Navigator.pushReplacement(context, MaterialPageRoute(builder: (context){
+              //                                return ShopScreen();
 
-                                           }));
-
-                                         });
+              //                              }));
             },
           ),
                           ),
