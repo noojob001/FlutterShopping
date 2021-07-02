@@ -60,13 +60,13 @@ class _LoginScreenState extends State<LoginScreen> {
                             padding: EdgeInsets.only(left:100.0,bottom: 20),
                             child: IconButton(
             icon: SvgPicture.asset("images/google.svg"),
-            onPressed: ()  {
+            onPressed: ()  async{
               final provider = Provider.of<GoogleSignInProvider>(context, listen: false);
               provider.googleLogin();
-              // await Navigator.pushReplacement(context, MaterialPageRoute(builder: (context){
-              //                                return ShopScreen();
+              await Navigator.pushReplacement(context, MaterialPageRoute(builder: (context){
+                                             return ShopScreen();
 
-              //                              }));
+                                           }));
             },
           ),
                           ),
