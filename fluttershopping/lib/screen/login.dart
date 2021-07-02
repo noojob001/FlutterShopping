@@ -13,6 +13,7 @@ import 'package:form_field_validator/form_field_validator.dart';
 import 'package:provider/provider.dart';
 
 import '../home.dart';
+import 'googlehome.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -64,9 +65,10 @@ class _LoginScreenState extends State<LoginScreen> {
               final provider = Provider.of<GoogleSignInProvider>(context, listen: false);
               provider.googleLogin();
               await Navigator.pushReplacement(context, MaterialPageRoute(builder: (context){
-                                             return ShopScreen();
+                                             return GoogleHome();
 
                                            }));
+              
             },
           ),
                           ),

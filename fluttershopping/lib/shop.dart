@@ -3,10 +3,12 @@ import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fluttershopping/components/body.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:fluttershopping/provider/google.dart';
 import 'package:fluttershopping/screen/about.dart';
 import 'package:fluttershopping/screen/allproduct.dart';
 import 'package:fluttershopping/screen/change.dart';
 import 'package:fluttershopping/screen/contact.dart';
+import 'package:provider/provider.dart';
 
 import 'home.dart';
 
@@ -134,6 +136,8 @@ class _ShopScreenState extends State<ShopScreen> {
                             return HomeScreen();
                           }));
                         });
+                        final provider = Provider.of<GoogleSignInProvider>(context, listen: false);
+                        provider.logout();
                       },
                       style:ElevatedButton.styleFrom(primary: Colors.orange[300],)
                     )),
