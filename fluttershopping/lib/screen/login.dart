@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_signin_button/flutter_signin_button.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fluttershopping/components/body.dart';
 import 'package:fluttershopping/model/profile.dart';
@@ -47,7 +48,6 @@ class _LoginScreenState extends State<LoginScreen> {
                 appBar: AppBar(
                   title: Text("Login"),
                 ),
-                
                 body: Container(
                     child: Padding(
                   padding: const EdgeInsets.fromLTRB(30, 50, 30, 30),
@@ -57,20 +57,36 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Padding(
-                            padding: EdgeInsets.only(left:100.0,bottom: 20),
-                            child: IconButton(
-            icon: SvgPicture.asset("images/google.svg"),
-            onPressed: ()  async{
-              final provider = Provider.of<GoogleSignInProvider>(context, listen: false);
-              provider.googleLogin();
-              await Navigator.pushReplacement(context, MaterialPageRoute(builder: (context){
-                                             return GoogleHome();
-
-                                           }));
-              
-            },
-          ),
+                          Row(
+                            children: [
+                              Padding(
+                                padding:
+                                    EdgeInsets.only(left: 60.0, bottom: 20),
+                                child: SignInButton(
+                                  Buttons.Google,
+                                  text: "Sign in with Google",
+                                  onPressed: () async {
+                                    final provider =
+                                        Provider.of<GoogleSignInProvider>(
+                                            context,
+                                            listen: false);
+                                    provider.googleLogin();
+                                    await Navigator.pushReplacement(context,
+                                        MaterialPageRoute(builder: (context) {
+                                      return GoogleHome();
+                                    }));
+                                  },
+                                ),
+                              ),
+                              // Padding(
+                              //   padding:
+                              //       EdgeInsets.only(left: 30.0, bottom: 20),
+                              //   child: IconButton(
+                              //     icon: Icon(Icons.phone_iphone),
+                              //     onPressed: () {},
+                              //   ),
+                              // ),
+                            ],
                           ),
                           Text("Email", style: TextStyle(fontSize: 20)),
                           TextFormField(
@@ -111,19 +127,19 @@ class _LoginScreenState extends State<LoginScreen> {
                                   if (formKey.currentState.validate()) {
                                     formKey.currentState.save();
                                     try {
-                                      await FirebaseAuth.instance.signInWithEmailAndPassword(
-                                        email: profile.email,
-                                         password: profile.password).then((value){
-                                           formKey.currentState.reset();
-                                           Navigator.pushReplacement(context, MaterialPageRoute(builder: (context){
-                                             return ShopScreen();
-
-                                           }));
-
-                                         });
-                                      
+                                      await FirebaseAuth.instance
+                                          .signInWithEmailAndPassword(
+                                              email: profile.email,
+                                              password: profile.password)
+                                          .then((value) {
+                                        formKey.currentState.reset();
+                                        Navigator.pushReplacement(context,
+                                            MaterialPageRoute(
+                                                builder: (context) {
+                                          return ShopScreen();
+                                        }));
+                                      });
                                     } on FirebaseAuthException catch (e) {
-                                      
                                       Fluttertoast.showToast(
                                           msg: e.message,
                                           gravity: ToastGravity.CENTER);
@@ -143,8 +159,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   }));
                                 },
                               )),
-
-                              SizedBox(
+                          SizedBox(
                               width: double.infinity,
                               child: ElevatedButton(
                                 child: Text("Forgot Password",

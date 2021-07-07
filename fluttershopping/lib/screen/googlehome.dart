@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttershopping/home.dart';
+import 'package:fluttershopping/screen/login.dart';
 import 'package:fluttershopping/shop.dart';
 
 class GoogleHome extends StatelessWidget {
@@ -20,7 +21,7 @@ class GoogleHome extends StatelessWidget {
             return Center(child: Text("Something Went Wrong"));
           }
           else {
-          return HomeScreen();
+          return LoginScreen();
           }
         },
       )
