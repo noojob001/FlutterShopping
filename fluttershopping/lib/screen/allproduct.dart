@@ -211,7 +211,7 @@ List<Product> _products = [
     return Scaffold(
       backgroundColor: Colors.amber[100],
       appBar: AppBar(
-        backgroundColor: Colors.orange[300],
+        backgroundColor: Colors.orange[400],
         title: Text("All Product"),
         actions: <Widget>[
           IconButton(

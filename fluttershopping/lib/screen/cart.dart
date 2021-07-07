@@ -19,7 +19,7 @@ class _CartPageState extends State<CartPage> {
     // TODO: implement build
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.indigo,
+          backgroundColor: Colors.orange[400],
           title: Text("Cart"),
           actions: <Widget>[
             FlatButton(

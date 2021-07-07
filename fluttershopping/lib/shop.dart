@@ -8,6 +8,7 @@ import 'package:fluttershopping/screen/about.dart';
 import 'package:fluttershopping/screen/allproduct.dart';
 import 'package:fluttershopping/screen/change.dart';
 import 'package:fluttershopping/screen/contact.dart';
+import 'package:fluttershopping/screen/forgotpass.dart';
 import 'package:provider/provider.dart';
 
 import 'home.dart';
@@ -90,6 +91,26 @@ class _ShopScreenState extends State<ShopScreen> {
                 height:5.0
               ),
             ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(15, 0, 0, 0),
+              child: ListTile(
+                title: Text("Change Password",style: TextStyle(fontSize: 18),),
+                onTap: () {
+                  Navigator.of(context).pop();
+                  Navigator.pushReplacement(context,
+                                      MaterialPageRoute(builder: (context) {
+                                    return ForgotPassword();
+                                  }));
+                },
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(5,0,5,0),
+              child: Divider(
+                color:Colors.black,
+                height:5.0
+              ),
+            ),
             // Padding(
             //   padding: EdgeInsets.fromLTRB(15, 0, 0, 0),
             //   child: ListTile(
@@ -151,7 +172,7 @@ class _ShopScreenState extends State<ShopScreen> {
 
   AppBar buildAppBar() {
     return AppBar(
-      backgroundColor: Colors.orange[300],
+      backgroundColor: Colors.orange[400],
       elevation: 0,
       // leading: 
       // IconButton(icon: SvgPicture.asset("images/hamburger.svg"), onPressed: () {  },

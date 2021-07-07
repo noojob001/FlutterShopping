@@ -97,13 +97,13 @@ class _ShopScreendState extends State<ShopScreend> {
                     width: 10.0,
                     child: ElevatedButton(
                       child: Text(
-                        "Change Password",
+                        "Login",
                         style: TextStyle(fontSize: 20),
                       ),
                       onPressed: () {
                           Navigator.pushReplacement(context,
                               MaterialPageRoute(builder: (context) {
-                            return ChangeID();
+                            return HomeScreen();
                           }));
                       },
                       style:ElevatedButton.styleFrom(primary: Colors.orange[300],)

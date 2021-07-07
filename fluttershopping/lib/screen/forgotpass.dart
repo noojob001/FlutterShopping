@@ -22,6 +22,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
         key: scaffoldKey,
         appBar: AppBar(
           title: Text("Reset password", style: TextStyle(color: Colors.white)),
+          backgroundColor: Colors.orange[400],
         ),
         body: Container(
             // color: Colors.grey[200],
@@ -71,7 +72,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                 style: TextStyle(fontSize: 18, color: Colors.white)),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16),
-                color: Colors.orange[200]),
+                color: Colors.orange[400]),
             margin: EdgeInsets.only(top: 16),
             padding: EdgeInsets.all(12)),
         onTap: () => resetPassword());
