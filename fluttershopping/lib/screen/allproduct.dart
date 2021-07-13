@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_share_file/flutter_share_file.dart';
 import 'package:fluttershopping/model/cartmodel.dart';
 // import 'package:fluttershopping/model/product.dart';
 import 'package:scoped_model/scoped_model.dart';
@@ -206,6 +209,8 @@ List<Product> _products = [
   ),
 ];
 
+
+
    @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -238,7 +243,15 @@ List<Product> _products = [
         // ignore: deprecated_member_use
         OutlineButton(
               child: Text("Add to Cart"),
-              onPressed: () => model.addProduct(_products[index]))
+              onPressed: () => model.addProduct(_products[index])),
+              
+              // IconButton(icon: Icon(Icons.share), 
+              // onPressed: () async {
+              //   Directory dir = await getApplicationDocumentsDirectory();
+              //   File testFile = new File("C:/Users/JB/Documents/GitHub/FlutterShopping/fluttershopping/images/image.png");
+              //   FlutterShareFile.shareImage(dir.path, "image.png", ShareFileType.image);
+              // },
+              // )
       ])); 
             });
           },
