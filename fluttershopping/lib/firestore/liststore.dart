@@ -88,7 +88,7 @@ class _HomeCloudState extends State<HomeCloud> {
 
     // Show a snackbar
     ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('You have successfully deleted a product')));
+        SnackBar(content: Text('Already Deleted')));
   }
 
   @override
